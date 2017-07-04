@@ -1,0 +1,2 @@
+module SgdaSellerGoalDaysHelper
+end

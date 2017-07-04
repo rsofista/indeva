@@ -1,0 +1,6 @@
+<h1><%= "#{t('editing')} #{t('store.title_singular')}" %></h1>
+
+<%= render 'form', store: @store %>
+
+<%= link_to t('show'), @store %> |
+<%= link_to t('back'), stores_path %>

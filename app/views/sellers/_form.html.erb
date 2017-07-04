@@ -1,0 +1,22 @@
+<%= form_with(model: seller, local: true) do |form| %>
+  <% if seller.errors.any? %>
+    <div id="error_explanation">
+      <h2><%= t('errors_on_save_message', count: seller.errors.count) %></h2>
+
+      <ul>
+      <% seller.errors.full_messages.each do |message| %>
+        <li><%= message %></li>
+      <% end %>
+      </ul>
+    </div>
+  <% end %>
+
+  <div class="form-group">
+    <%= form.label :name %><br />
+    <%= form.text_field :name, autofocus: true, class: 'form-control' %>
+  </div>
+
+  <div class="actions">
+    <%= form.submit class: 'btn btn-primary' %>
+  </div>
+<% end %>

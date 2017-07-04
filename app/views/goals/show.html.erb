@@ -1,0 +1,29 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <strong><%= t 'goal.id' %></strong>
+  <%= @goal.id %>
+</p>
+
+<p>
+  <strong><%= t 'goal.start_date' %></strong>
+  <%= l @goal.start_date %>
+</p>
+
+<p>
+  <strong><%= t 'goal.end_date' %></strong>
+  <%= l @goal.end_date %>
+</p>
+
+<p>
+  <strong><%= t 'goal.value' %></strong>
+  <%= number_to_currency @goal.value %>
+</p>
+
+<p>
+  <strong><%= t 'goal.month_year' %></strong>
+  <%= format_month_year @goal.month, @goal.year %>
+</p>
+
+<%= link_to t('edit'), edit_goal_path(@goal) %> |
+<%= link_to t('back'), goals_path %>

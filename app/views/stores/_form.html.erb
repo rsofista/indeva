@@ -1,0 +1,32 @@
+<%= form_with(model: store, local: true) do |f| %>
+  <% if store.errors.any? %>
+    <div id="error_explanation">
+      <h2><%= t('errors_on_save_message', count: store.errors.count) %></h2>
+
+      <ul>
+      <% store.errors.full_messages.each do |message| %>
+        <li><%= message %></li>
+      <% end %>
+      </ul>
+    </div>
+  <% end %>
+
+  <div class="form-group">
+    <%= f.label :name %>
+    <%= f.text_field :name, autofocus: true, class: 'form-control' %>
+  </div>
+
+  <h3><%= t('seller.title') %></h3>
+
+  <%= f.fields_for :sellers do |ff| %>
+    <p>
+      #<%= ff.object.id %>
+      <strong><%= ff.object.name %></strong> - 
+      <%= link_to t('destroy_association'), store_sellers_path(id: f.object.id, seller_id: ff.object.id), method: :delete, data: { confirm: t('confirm_destroy_association') } %>
+    </p>
+  <% end %>
+
+  <div class="actions">
+    <%= f.submit class: 'btn btn-primary' %>
+  </div>
+<% end %>

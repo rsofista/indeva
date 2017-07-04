@@ -1,0 +1,25 @@
+---
+pt-BR:
+  default_goal_fields: &default_goal_fields
+    id: Cód.
+    start_date: Data inicial
+    end_date: Data final
+    value: Valor
+    month: Mês
+    year: Ano
+    month_year: Mês/Ano
+    store: Loja
+
+  goal:
+    new: Nova Meta
+    date: Data
+    title: Metas
+    title_singular: Meta
+    <<: *default_goal_fields
+
+  activerecord:
+    models:
+      goal: Meta
+    attributes:
+      goal:
+        <<: *default_goal_fields

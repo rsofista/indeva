@@ -1,0 +1,2 @@
+module SgoaStoreGoalsHelper
+end

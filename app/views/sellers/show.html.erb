@@ -1,0 +1,14 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <strong><%= t 'seller.id' %></strong>
+  <%= @seller.id %>
+</p>
+
+<p>
+  <strong><%= t 'seller.name' %></strong>
+  <%= @seller.name %>
+</p>
+
+<%= link_to t('edit'), edit_seller_path(@seller) %> |
+<%= link_to t('back'), sellers_path %>

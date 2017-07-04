@@ -1,0 +1,17 @@
+<%= form_with(model: seller_goal, local: true) do |form| %>
+  <% if seller_goal.errors.any? %>
+    <div id="error_explanation">
+      <h2><%= pluralize(seller_goal.errors.count, "error") %> prohibited this seller_goal from being saved:</h2>
+
+      <ul>
+      <% seller_goal.errors.full_messages.each do |message| %>
+        <li><%= message %></li>
+      <% end %>
+      </ul>
+    </div>
+  <% end %>
+
+  <div class="actions">
+    <%= form.submit %>
+  </div>
+<% end %>

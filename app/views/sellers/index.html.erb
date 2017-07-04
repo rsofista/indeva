@@ -1,0 +1,29 @@
+<p id="notice"><%= notice %></p>
+
+<h1><%= t 'seller.title' %></h1>
+
+<table class="table table-striped">
+  <thead>
+    <tr>
+      <th><%= t 'seller.id' %></th>
+      <th><%= t 'seller.name' %></th>
+      <th colspan="3"></th>
+    </tr>
+  </thead>
+
+  <tbody>
+    <% @sellers.each do |seller| %>
+      <tr>
+        <td class="td-small"><%= seller.id %></td>
+        <td><%= seller.name %></td>
+        <td class="td-small"><%= link_to t('show'), seller %></td>
+        <td class="td-small"><%= link_to t('edit'), edit_seller_path(seller) %></td>
+        <td class="td-small"><%= link_to t('destroy'), seller, method: :delete, data: { confirm: t('confirm_destroy') } %></td>
+      </tr>
+    <% end %>
+  </tbody>
+</table>
+
+<br>
+
+<%= link_to t('seller.new'), new_seller_path %>

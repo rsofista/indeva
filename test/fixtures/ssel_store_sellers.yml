@@ -1,0 +1,11 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+one:
+  ssel_id: 
+  ssel_stor_id: 1
+  ssel_sell_id: 1
+
+two:
+  ssel_id: 
+  ssel_stor_id: 1
+  ssel_sell_id: 1

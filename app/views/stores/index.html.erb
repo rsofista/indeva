@@ -1,0 +1,29 @@
+<p id="notice"><%= notice %></p>
+
+<h1><%= t 'store.title' %></h1>
+
+<table class="table table-striped">
+  <thead>
+    <tr>
+      <th><%= t 'store.id' %></th>
+      <th><%= t 'store.name' %></th>
+      <th colspan="3"></th>
+    </tr>
+  </thead>
+
+  <tbody>
+    <% @stores.each do |store| %>
+      <tr>
+        <td class="td-small"><%= store.id %></td>
+        <td><%= store.name %></td>
+        <td class="td-small"><%= link_to t('show'), store %></td>
+        <td class="td-small"><%= link_to t('edit'), edit_store_path(store) %></td>
+        <td class="td-small"><%= link_to t('destroy'), store, method: :delete, data: { confirm: t('confirm_destroy') } %></td>
+      </tr>
+    <% end %>
+  </tbody>
+</table>
+
+<br>
+
+<%= link_to t('store.new'), new_store_path %>

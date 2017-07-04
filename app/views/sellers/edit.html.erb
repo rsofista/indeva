@@ -1,0 +1,6 @@
+<h1><%= "#{t('editing')} #{t('goal.title_singular')}" %></h1>
+
+<%= render 'form', seller: @seller %>
+
+<%= link_to t('show'), @seller %> |
+<%= link_to t('back'), sellers_path %>

@@ -1,0 +1,17 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+one:
+  user: 
+  goal_start_date: 2017-07-01
+  goal_end_date: 2017-07-01
+  goal_value: 1.5
+  goal_year: 1
+  goal_month: 1
+
+two:
+  user: 
+  goal_start_date: 2017-07-01
+  goal_end_date: 2017-07-01
+  goal_value: 1.5
+  goal_year: 1
+  goal_month: 1

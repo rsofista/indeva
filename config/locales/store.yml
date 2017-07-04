@@ -1,0 +1,18 @@
+---
+pt-BR:
+  default_store_fields: &default_store_fields
+    id: Cód.
+    name: Nome
+
+  store:
+    title: Lojas
+    title_singular: Loja
+    new: Nova Loja
+    <<: *default_store_fields
+
+  activerecord:
+    models:
+      store: Loja
+    attributes:
+      store:
+        <<: *default_store_fields

@@ -1,0 +1,17 @@
+<%= form_with(model: goal_day, local: true) do |form| %>
+  <% if goal_day.errors.any? %>
+    <div id="error_explanation">
+      <h2><%= t('error_message', goal_day.errors.count) %></h2>
+
+      <ul>
+      <% goal_day.errors.full_messages.each do |message| %>
+        <li><%= message %></li>
+      <% end %>
+      </ul>
+    </div>
+  <% end %>
+
+  <div class="actions">
+    <%= form.submit %>
+  </div>
+<% end %>

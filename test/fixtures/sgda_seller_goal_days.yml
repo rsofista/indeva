@@ -1,0 +1,13 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+one:
+  sgda_id: 
+  sgda_gday_id: 1
+  sgda_sell_id: 1
+  sgda_value: 1.5
+
+two:
+  sgda_id: 
+  sgda_gday_id: 1
+  sgda_sell_id: 1
+  sgda_value: 1.5

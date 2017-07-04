@@ -1,0 +1,14 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <strong><%= t 'store.id' %></strong>
+  <%= @store.id %>
+</p>
+
+<p>
+  <strong><%= t 'store.name' %></strong>
+  <%= @store.name %>
+</p>
+
+<%= link_to t('edit'), edit_store_path(@store) %> |
+<%= link_to t('back'), stores_path %>
